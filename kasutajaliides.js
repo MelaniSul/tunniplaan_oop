@@ -16,27 +16,29 @@ class Kasutajaliides{
         console.log(tunniNr);
 }
 
-    print(tunniplaan){
+    print(tunniplaan) {
         const nadalaAlgus = tunniplaan.nadal;
-        const nadalaKp = Object.values(this.nadalaKuupaevad(tunniplaan));
+        const nadalaKuupaevad = Object.values(this.nadalaKuupaevad(tunniplaan));
         const nadalaTunnid = tunniplaan.tunnid;
-        const nadalaToopaevad = Object.keys(nadalaTunnid);
+        const nadalaTooPaevad = Object.keys(nadalaTunnid);
         const nadalaPaevaNimetused = Object.keys(this.nadalaKuupaevad(tunniplaan));
-        for(let i = 0; i < nadalaPaevaNimetused.length; i++){
-            for(let j = 0; j < nadalaToopaevad.length; j++){
-                if(nadalaKp[i] === nadalaToopaevad[j]){
-                    console.log(nadalaKp[i] + '-tunnid olemas');
-                    const paevaTunnid = Object.values(nadalaTunnid[j]);
-                    for(let t = 0; t < paevaTunnid.length; t++){
+        for (let i = 0; i < nadalaPaevaNimetused.length; i++) {
+            for (let j = 0; j < nadalaTooPaevad.length; j++) {
+                if (nadalaKuupaevad[i] === nadalaTooPaevad[j]) {
+                    console.log(nadalaKuupaevad[i] + ' - tunnid on olemas');
+                    const paevaTunnid = Object.values(nadalaTunnid)[j];
+                    for (let t = 0; t < paevaTunnid.length; t++) {
                         const tund = paevaTunnid[t];
                         const paev = nadalaPaevaNimetused[i];
+                        console.log(tund);
+                        console.log(paev);
+                        this.printTund(tund, paev);
+                        console.log("-----------");
                     }
                 }
             }
         }
-    }
-
-    printNadalakp(nadalaAndmed){
+    }printNadalakp(nadalaAndmed){
       const e = document.querySelector('#e');
       e.textContent = `E ${nadalaAndmed.e}`;
         const t = document.querySelector('#t');
