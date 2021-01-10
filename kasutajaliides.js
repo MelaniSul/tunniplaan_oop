@@ -17,7 +17,7 @@ class Kasutajaliides{
 }
 
     print(tunniplaan){
-        const nadalaAlgus = tunniplaaniAndmed.nadal;
+        const nadalaAlgus = tunniplaan.nadal;
         const nadalaKp = Object.values(this.nadalaKuupaevad(tunniplaan));
         const nadalaTunnid = tunniplaan.tunnid;
         const nadalaToopaevad = Object.keys(nadalaTunnid);
