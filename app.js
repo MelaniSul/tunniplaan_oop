@@ -6,5 +6,6 @@ document.addEventListener('DOMContentLoaded', valjastatudTunniplaan);
 function valjastatudTunniplaan(){
     tunniplaan.opetajaTunniplaaniAndmed().then(tunnid => {
         kl.printNadalakp(kl.nadalaKuupaevad(tunnid));
+        kl.print(tunnid);
     }).catch(viga => console.log(viga));
 }
