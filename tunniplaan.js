@@ -11,7 +11,7 @@ class Tunniplaan{
         return andmed;
     }
 
-    changeTeacher(name){
+    changeTeacherName(name){
        this.opetaja = name;
     }
 }

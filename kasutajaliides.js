@@ -1,4 +1,5 @@
 class Kasutajaliides{
+
     printTund(tund, paev){
         const tunniNr = `.tund-${tund.tund}`;
         const paevaNimetus = `.${paev}`;
@@ -39,7 +40,9 @@ class Kasutajaliides{
             }
         }
 
-    }printNadalakp(nadalaAndmed){
+    }
+
+    printNadalakp(nadalaAndmed){
       const e = document.querySelector('#e');
       e.textContent = `E ${nadalaAndmed.e}`;
         const t = document.querySelector('#t');
