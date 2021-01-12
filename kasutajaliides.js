@@ -38,6 +38,7 @@ class Kasutajaliides{
                 }
             }
         }
+
     }printNadalakp(nadalaAndmed){
       const e = document.querySelector('#e');
       e.textContent = `E ${nadalaAndmed.e}`;
